@@ -13,7 +13,9 @@ public class OrderQuerySkill {
 
     public String queryOrder(String orderNo) {
         Order order = orderMapper.selectOne(new QueryWrapper<Order>().eq("order_no", orderNo));
-        if (order == null) return "订单" + orderNo + "不存在";
+        if (order == null) {
+            return "订单" + orderNo + "不存在";
+        }
 
         return "【订单信息】" +
                 " 订单号：" + order.getOrderNo() +
