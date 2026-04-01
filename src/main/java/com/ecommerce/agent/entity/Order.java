@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data
@@ -18,5 +19,5 @@ public class Order {
     private Integer price;
     private String status;
 //    private String createTime;
-    private Date createTime;
+    private LocalDateTime createTime;
 }
